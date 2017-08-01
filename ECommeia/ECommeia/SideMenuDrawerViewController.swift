@@ -1,19 +1,20 @@
 //
-//  TabPageContainerViewController.swift
+//  SideMenuDrawerViewController.swift
 //  ECommeia
 //
-//  Created by HyperThink Systems on 31/07/17.
+//  Created by HyperThink Systems on 01/08/17.
 //  Copyright © 2017 HTS. All rights reserved.
 //
 
 import UIKit
 
-class TabPageContainerViewController: UIViewController {
+class SideMenuDrawerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     }
+        // Do any additional setup after loading the view.
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

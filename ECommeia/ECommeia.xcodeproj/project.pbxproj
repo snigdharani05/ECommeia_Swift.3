@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		AB964C8ADDD27D5F99C421BB /* Pods_ECommeia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9004646364E177C24FA01299 /* Pods_ECommeia.framework */; };
+		C01C598C1F3068D900347EA0 /* SideMenuDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C598B1F3068D900347EA0 /* SideMenuDrawerViewController.swift */; };
+		C01C59901F306B6400347EA0 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C598E1F306B6400347EA0 /* SideMenuView.swift */; };
+		C01C59911F306B6400347EA0 /* SideMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C598F1F306B6400347EA0 /* SideMenuView.xib */; };
+		C01C59931F30A9B000347EA0 /* p3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C01C59921F30A9B000347EA0 /* p3.jpg */; };
+		C01C59971F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C59951F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.swift */; };
+		C01C59981F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C59961F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.xib */; };
+		C01C59991F30AC1D00347EA0 /* SideMenuDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01C59951F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.swift */; };
+		C01C599A1F30AC1D00347EA0 /* SideMenuDrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01C59961F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.xib */; };
+		C01C599C1F30AD2D00347EA0 /* food_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C01C599B1F30AD2D00347EA0 /* food_icon.png */; };
 		C06E98C71F2EFE9A004FB8BE /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E98C51F2EFE9A004FB8BE /* SecondView.swift */; };
 		C06E98C81F2EFE9A004FB8BE /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06E98C61F2EFE9A004FB8BE /* SecondView.xib */; };
 		C06E98CB1F2EFEB0004FB8BE /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E98C91F2EFEB0004FB8BE /* ThirdView.swift */; };
 		C06E98CC1F2EFEB0004FB8BE /* ThirdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06E98CA1F2EFEB0004FB8BE /* ThirdView.xib */; };
-		C06E98CF1F2F4014004FB8BE /* TabPageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E98CE1F2F4014004FB8BE /* TabPageContainerViewController.swift */; };
 		C06E98E21F2F52C1004FB8BE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E98E01F2F52C1004FB8BE /* FirstViewController.swift */; };
 		C06E98E31F2F52C1004FB8BE /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06E98E11F2F52C1004FB8BE /* FirstViewController.xib */; };
 		C06E98E61F2F52D0004FB8BE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E98E41F2F52D0004FB8BE /* SecondViewController.swift */; };
@@ -66,11 +74,17 @@
 
 /* Begin PBXFileReference section */
 		9004646364E177C24FA01299 /* Pods_ECommeia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommeia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C01C598B1F3068D900347EA0 /* SideMenuDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuDrawerViewController.swift; sourceTree = "<group>"; };
+		C01C598E1F306B6400347EA0 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		C01C598F1F306B6400347EA0 /* SideMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuView.xib; sourceTree = "<group>"; };
+		C01C59921F30A9B000347EA0 /* p3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = p3.jpg; sourceTree = "<group>"; };
+		C01C59951F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuDrawerTableViewCell.swift; sourceTree = "<group>"; };
+		C01C59961F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuDrawerTableViewCell.xib; sourceTree = "<group>"; };
+		C01C599B1F30AD2D00347EA0 /* food_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food_icon.png; sourceTree = "<group>"; };
 		C06E98C51F2EFE9A004FB8BE /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		C06E98C61F2EFE9A004FB8BE /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		C06E98C91F2EFEB0004FB8BE /* ThirdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		C06E98CA1F2EFEB0004FB8BE /* ThirdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdView.xib; sourceTree = "<group>"; };
-		C06E98CE1F2F4014004FB8BE /* TabPageContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabPageContainerViewController.swift; sourceTree = "<group>"; };
 		C06E98E01F2F52C1004FB8BE /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C06E98E11F2F52C1004FB8BE /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		C06E98E41F2F52D0004FB8BE /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +170,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C01C59891F30687500347EA0 /* MenuItemViews */ = {
+			isa = PBXGroup;
+			children = (
+				C06E98E01F2F52C1004FB8BE /* FirstViewController.swift */,
+				C06E98E11F2F52C1004FB8BE /* FirstViewController.xib */,
+				C06E98E41F2F52D0004FB8BE /* SecondViewController.swift */,
+				C06E98E51F2F52D0004FB8BE /* SecondViewController.xib */,
+				C06E98E81F2F565C004FB8BE /* ThirdViewController.swift */,
+				C06E98E91F2F565C004FB8BE /* ThirdViewController.xib */,
+				C06E98EC1F2F566F004FB8BE /* FourthViewController.swift */,
+				C06E98ED1F2F566F004FB8BE /* FourthViewController.xib */,
+				C06E98F01F2F567F004FB8BE /* FifthViewController.swift */,
+				C06E98F11F2F567F004FB8BE /* FifthViewController.xib */,
+			);
+			name = MenuItemViews;
+			sourceTree = "<group>";
+		};
+		C01C598A1F3068AD00347EA0 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C01C59941F30ABF300347EA0 /* CustomCells */,
+				C01C598D1F306AC500347EA0 /* SubViews */,
+				C01C598B1F3068D900347EA0 /* SideMenuDrawerViewController.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		C01C598D1F306AC500347EA0 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C01C598E1F306B6400347EA0 /* SideMenuView.swift */,
+				C01C598F1F306B6400347EA0 /* SideMenuView.xib */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		C01C59941F30ABF300347EA0 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				C01C59951F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.swift */,
+				C01C59961F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.xib */,
+			);
+			name = CustomCells;
+			sourceTree = "<group>";
+		};
 		C0A813881F2CA52E00C37711 /* 3rdPartyClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,20 +292,11 @@
 		C0F6C41F1F2B4CBD0013699D /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				C01C598A1F3068AD00347EA0 /* SideMenu */,
+				C01C59891F30687500347EA0 /* MenuItemViews */,
 				C0F6C4571F2B54660013699D /* SubViews */,
 				C06E98F41F2F60C0004FB8BE /* LoginInViewController.swift */,
 				C0F6C4531F2B4DA30013699D /* HomeViewController.swift */,
-				C06E98CE1F2F4014004FB8BE /* TabPageContainerViewController.swift */,
-				C06E98E01F2F52C1004FB8BE /* FirstViewController.swift */,
-				C06E98E11F2F52C1004FB8BE /* FirstViewController.xib */,
-				C06E98E41F2F52D0004FB8BE /* SecondViewController.swift */,
-				C06E98E51F2F52D0004FB8BE /* SecondViewController.xib */,
-				C06E98E81F2F565C004FB8BE /* ThirdViewController.swift */,
-				C06E98E91F2F565C004FB8BE /* ThirdViewController.xib */,
-				C06E98EC1F2F566F004FB8BE /* FourthViewController.swift */,
-				C06E98ED1F2F566F004FB8BE /* FourthViewController.xib */,
-				C06E98F01F2F567F004FB8BE /* FifthViewController.swift */,
-				C06E98F11F2F567F004FB8BE /* FifthViewController.xib */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -254,6 +304,8 @@
 		C0F6C4441F2B4D080013699D /* Icon&Images */ = {
 			isa = PBXGroup;
 			children = (
+				C01C599B1F30AD2D00347EA0 /* food_icon.png */,
+				C01C59921F30A9B000347EA0 /* p3.jpg */,
 				C0F6C4551F2B51AC0013699D /* menu_icon.png */,
 				C0F6C4641F2B66900013699D /* wishList_icon.png */,
 				C0A813541F2C4FE700C37711 /* 1.png */,
@@ -418,11 +470,15 @@
 				C0F6C3FC1F2B4C660013699D /* LaunchScreen.storyboard in Resources */,
 				C0F6C3F91F2B4C660013699D /* Assets.xcassets in Resources */,
 				C06E98EB1F2F565C004FB8BE /* ThirdViewController.xib in Resources */,
+				C01C59981F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.xib in Resources */,
 				C06E98E71F2F52D0004FB8BE /* SecondViewController.xib in Resources */,
+				C01C599C1F30AD2D00347EA0 /* food_icon.png in Resources */,
 				C0F6C3F41F2B4C660013699D /* Main.storyboard in Resources */,
+				C01C59911F306B6400347EA0 /* SideMenuView.xib in Resources */,
 				C0F6C44A1F2B4D5B0013699D /* HomeCollectionViewCell.xib in Resources */,
 				C06E98F31F2F567F004FB8BE /* FifthViewController.xib in Resources */,
 				C06E98C81F2EFE9A004FB8BE /* SecondView.xib in Resources */,
+				C01C59931F30A9B000347EA0 /* p3.jpg in Resources */,
 				C0F6C4561F2B51AC0013699D /* menu_icon.png in Resources */,
 				C0A813551F2C4FE700C37711 /* 1.png in Resources */,
 			);
@@ -432,6 +488,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01C599A1F30AC1D00347EA0 /* SideMenuDrawerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,15 +556,17 @@
 			files = (
 				C0F6C44D1F2B4D660013699D /* Constants.swift in Sources */,
 				C06E98F21F2F567F004FB8BE /* FifthViewController.swift in Sources */,
+				C01C59971F30AC1A00347EA0 /* SideMenuDrawerTableViewCell.swift in Sources */,
 				C0F6C3F71F2B4C660013699D /* ECommeia.xcdatamodeld in Sources */,
 				C0F6C44E1F2B4D660013699D /* GlobalFunctions.swift in Sources */,
+				C01C59901F306B6400347EA0 /* SideMenuView.swift in Sources */,
 				C0F6C3F11F2B4C660013699D /* ViewController.swift in Sources */,
 				C06E98E61F2F52D0004FB8BE /* SecondViewController.swift in Sources */,
 				C0F6C3EF1F2B4C660013699D /* AppDelegate.swift in Sources */,
+				C01C598C1F3068D900347EA0 /* SideMenuDrawerViewController.swift in Sources */,
 				C06E98E21F2F52C1004FB8BE /* FirstViewController.swift in Sources */,
 				C06E98EA1F2F565C004FB8BE /* ThirdViewController.swift in Sources */,
 				C06E98F51F2F60C0004FB8BE /* LoginInViewController.swift in Sources */,
-				C06E98CF1F2F4014004FB8BE /* TabPageContainerViewController.swift in Sources */,
 				C0F6C45A1F2B548D0013699D /* HomeView.swift in Sources */,
 				C06E98C71F2EFE9A004FB8BE /* SecondView.swift in Sources */,
 				C0F6C4541F2B4DA30013699D /* HomeViewController.swift in Sources */,
@@ -522,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01C59991F30AC1D00347EA0 /* SideMenuDrawerTableViewCell.swift in Sources */,
 				C0F6C4071F2B4C670013699D /* ECommeiaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

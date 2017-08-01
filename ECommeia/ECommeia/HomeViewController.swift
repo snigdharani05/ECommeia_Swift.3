@@ -28,6 +28,8 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     
     var thirdView : ThirdView!
     
+    var sideMenu : SideMenuView!
+    
     var pageMenu : CAPSPageMenu?
     
     override func viewDidLoad() {
@@ -35,7 +37,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
         
        // showHomeView()
        // showFirstView()
-        
+        menuButton.tag = 1
         
         var controllerArray : [UIViewController] = []
         
@@ -74,15 +76,61 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     }
     
     
-    func willMoveToPage(controller: UIViewController, index: Int){}
     
-    func didMoveToPage(controller: UIViewController, index: Int){}
+    @IBAction func buttonActions(_ sender: UIButton) {
+        
+        switch sender {
+        case menuButton:
+            if menuButton.tag == 1{
+                menuButton.tag = 2
+                showSideMenuView()
+            }
+            else if menuButton.tag == 2{
+                menuButton.tag = 1
+                if sideMenu != nil{
+                    UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
+                        self.sideMenu.transform = CGAffineTransform(translationX: -600, y: 0)
+                        //self.alpha = 0.0
+                    }, completion: {(anim) -> Void in
+                    })
+                    
+
+                    //sideMenu.removeFromSuperview()
+                }
+            }
+            break
+        default:
+            break
+        }
+        
+        
+        
+    }
+    
+    
+//    func willMoveToPage(controller: UIViewController, index: Int){}
+//    
+//    func didMoveToPage(controller: UIViewController, index: Int){}
     
     func showHomeView(){
         homeView = HomeView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
         self.view.addSubview(homeView)
         homeView.home = self
     }
+    
+    func showSideMenuView(){
+        sideMenu = SideMenuView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
+        
+        let transition = CATransition()
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromLeft
+        sideMenu.layer.add(transition, forKey: nil)
+        
+        self.view.addSubview(sideMenu)
+       // sideMenu.home = self
+    }
+    
+
     
     func showFirstView(){
         firstView = FirstView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))

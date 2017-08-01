@@ -69,13 +69,23 @@ extension UIView
     
     internal func applyTrasperentBorderColor (){
         self.layer.borderColor = borderLightColor.cgColor
-        self.layer.borderWidth = 1.0
+        self.layer.borderWidth = 3.0
     }
     
     internal func applyTitleBarColorBorder (){
         self.layer.borderColor = title_Bar_Color.cgColor
         self.layer.borderWidth = 1.0
     }
+    
+    internal func invisibleAndtransformed(val1:CGFloat, val2:CGFloat, delay : TimeInterval)
+    {
+        UIView.animate(withDuration: 2.0, delay: delay, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
+            self.transform = CGAffineTransform(translationX: val1, y: val2)
+            self.alpha = 0.0
+        }, completion: {(anim) -> Void in
+        })
+    }
+
 }
 
 
