@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.5.0)
+  - PageMenu (2.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - PageMenu
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
+
+PODFILE CHECKSUM: 212db702f68168e321d0c1f5c09482b625d77d80
+
+COCOAPODS: 1.1.1
