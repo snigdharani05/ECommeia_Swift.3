@@ -71,17 +71,22 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
         
     }
     
+    func removeSideMenu(){
+        UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
+            self.transform = CGAffineTransform(translationX: -600, y: 0)
+            //self.alpha = 0.0
+        }, completion: {(anim) -> Void in
+        })
+
+    }
+    
     
     func respondToSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
         
             switch gesture.direction {
             case UISwipeGestureRecognizerDirection.left:
                 print("Swiped left")
-                UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
-                    self.transform = CGAffineTransform(translationX: -600, y: 0)
-                    //self.alpha = 0.0
-                }, completion: {(anim) -> Void in
-                })
+                removeSideMenu()
                 break
 
             default:
@@ -170,27 +175,27 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
             switch indexPath.row {
             case 0: //Food
                 
-                self.removeFromSuperview()
+                self.removeSideMenu()
                 home.moveToFirstdPage()
                 break
                 
             case 1: //ready BBQ Pckage
-                self.removeFromSuperview()
+                self.removeSideMenu()
                 home.moveToSecondPage()
                 break
                 
             case 2: //BBQ consumable
-                self.removeFromSuperview()
+                self.removeSideMenu()
                 home.moveToThirddPage()
                 break
                 
             case 3: //entertainment
-                self.removeFromSuperview()
+                self.removeSideMenu()
                 home.moveToFourthPage()
                 break
                 
             case 4: //fastfood delivery
-                self.removeFromSuperview()
+                self.removeSideMenu()
                 home.moveToFifthPage()
                 break
                 
