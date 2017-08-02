@@ -10,7 +10,7 @@ import UIKit
 import PageMenu
 
 
-class HomeViewController: UIViewController, CAPSPageMenuDelegate {
+class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDelegate {
     
     @IBOutlet weak var titleBarView: UIView!
     
@@ -22,29 +22,23 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     
     var homeView : HomeView!
     
-    var firstView : FirstView!
-    
-    var secondView : SecondView!
-    
-    var thirdView : ThirdView!
-    
     var sideMenu : SideMenuView!
     
     var pageMenu : CAPSPageMenu?
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       // showHomeView()
-       // showFirstView()
-        menuButton.tag = 1
-        
+                
         var controllerArray : [UIViewController] = []
         
         let controller1 : FirstViewController = FirstViewController(nibName: "FirstViewController", bundle: nil)
         controller1.title = "Food"
-        firstView = FirstView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: controller1.view.frame.height))
-        controller1.view.addSubview(firstView)
+        // firstView = FirstView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: controller1.view.frame.height))
+        // controller1.view.addSubview(firstView)
         controllerArray.append(controller1)
         
         let controller2 : SecondViewController = SecondViewController(nibName: "SecondViewController", bundle: nil)
@@ -63,7 +57,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
         controller5.title = "Gifts"
         controllerArray.append(controller5)
         
-        var parameters: [CAPSPageMenuOption] = [
+        let parameters: [CAPSPageMenuOption] = [
             .menuItemSeparatorWidth(3),
             .useMenuLikeSegmentedControl(true),
             .menuItemSeparatorPercentageHeight(0.1),
@@ -76,6 +70,24 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     }
     
     
+
+    func moveToFirstdPage(){
+        pageMenu?.moveToPage(0)
+    }
+    func moveToSecondPage(){
+        pageMenu?.moveToPage(1)
+    }
+    func moveToThirddPage(){
+        pageMenu?.moveToPage(2)
+    }
+    func moveToFourthPage(){
+        pageMenu?.moveToPage(3)
+    }
+    func moveToFifthPage(){
+        pageMenu?.moveToPage(4)
+    }
+ 
+
     
     @IBAction func buttonActions(_ sender: UIButton) {
         
@@ -104,9 +116,6 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
         default:
             break
         }
-        
-        
-        
     }
     
     
@@ -122,45 +131,51 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     
     func showSideMenuView(){
         sideMenu = SideMenuView(frame: CGRect(x: 0, y: titleBarView.frame.origin.y , width: screenWidth, height: screenHeight - titleBarView.frame.origin.y))
-        
+
         let transition = CATransition()
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromLeft
         sideMenu.layer.add(transition, forKey: nil)
+        self.view.addSubview(self.sideMenu)
         
-        self.view.addSubview(sideMenu)
-       // sideMenu.home = self
+        sideMenu.home = self
+
+        
+//        
+//       sideMenu.transform = CGAffineTransform(translationX: -600, y: 0)
+//        
+//        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
+//            self.sideMenu.transform = CGAffineTransform(translationX: 0, y: 0.0)
+//        }, completion: {(anim) -> Void in
+//            self.sideMenu.backgroundColor = UIColor(white: 0, alpha: 0.5)
+//        })
+//
+        
+        
     }
     
-
-    
-    func showFirstView(){
-        firstView = FirstView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
-        self.view.addSubview(firstView)
-        //firstView.home = self
-    }
-    
-    func showSecondView(){
-        secondView = SecondView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
-        self.view.addSubview(secondView)
-       // firstView.home = self
-    }
-
-    func showThirdView(){
-        thirdView = ThirdView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
-        self.view.addSubview(thirdView)
-       // firstView.home = self
-    }
-
-
-
-    
+//    func showFirstView(){
+//        firstView = FirstView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
+//        self.view.addSubview(firstView)
+//        //firstView.home = self
+//    }
+//    
+//    func showSecondView(){
+//        secondView = SecondView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
+//        self.view.addSubview(secondView)
+//       // firstView.home = self
+//    }
+//
+//    func showThirdView(){
+//        thirdView = ThirdView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
+//        self.view.addSubview(thirdView)
+//       // firstView.home = self
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

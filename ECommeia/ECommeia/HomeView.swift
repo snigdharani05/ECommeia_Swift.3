@@ -63,28 +63,7 @@ class HomeView: UIView{
     }
     
     
-    @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
-        
-        switch segmentControl.selectedSegmentIndex
-        {
-        case 0:
-            NSLog("Show MyPost")
-            self.home.showFirstView()
-        case 1:
-            NSLog("Show AboutUser")
-            self.home.showSecondView()
-        case 2:
-            NSLog("Show Photos")
-            self.home.showThirdView()
-        
-        default:
-            break;
-        }
-
-    }
-    
-     
-    
+       
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

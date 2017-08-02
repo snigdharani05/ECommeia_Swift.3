@@ -10,6 +10,7 @@ import UIKit
 
 class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
     
+    var home : HomeViewController! = HomeViewController()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -133,7 +134,7 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat{
-        return 1.0
+        return 0.5
     }
     
     
@@ -158,6 +159,93 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
          footer.tintColor = gray
 
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
+        print(selectedCell)
+        switch indexPath.section {
+        case 0: //first section
+            
+            
+            switch indexPath.row {
+            case 0: //Food
+                
+                self.removeFromSuperview()
+                home.moveToFirstdPage()
+                break
+                
+            case 1: //ready BBQ Pckage
+                self.removeFromSuperview()
+                home.moveToSecondPage()
+                break
+                
+            case 2: //BBQ consumable
+                self.removeFromSuperview()
+                home.moveToThirddPage()
+                break
+                
+            case 3: //entertainment
+                self.removeFromSuperview()
+                home.moveToFourthPage()
+                break
+                
+            case 4: //fastfood delivery
+                self.removeFromSuperview()
+                home.moveToFifthPage()
+                break
+                
+            case 5: //camping gear
+                break
+                
+            case 6: //more
+                break
+                
+            default:
+                break
+            }
+
+            
+            break
+            
+            
+            
+        case 1: // second section
+            
+            switch indexPath.row {
+            case 0: //my cart
+                
+                break
+            case 1: //my wishlist
+                break
+            default:
+                break
+            }
+
+            break
+            
+            
+            
+        case 2: //third section
+            
+            switch indexPath.row {
+            case 0: //contact us
+                
+                break
+            case 1: //T&C
+                break
+            case 2: //help
+                break
+            default:
+                break
+            }
+
+            break
+        default:
+            break
+        }
+        
+    }
+
 
 
     

@@ -72,6 +72,8 @@ open class CAPSPageMenu: UIViewController {
         case other
     }
 
+    
+  
     // MARK: - View life cycle
 
     /**
@@ -154,7 +156,11 @@ open class CAPSPageMenu: UIViewController {
             configureUserInterface()
         }
     }
+    
 
+    
+    
+   
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
@@ -164,7 +170,7 @@ open class CAPSPageMenu: UIViewController {
 
 extension CAPSPageMenu {    
     // MARK: - Handle Selection Indicator
-    func moveSelectionIndicator(_ pageIndex: Int) {
+   func moveSelectionIndicator(_ pageIndex: Int) {
         if pageIndex >= 0 && pageIndex < controllerArray.count {
             UIView.animate(withDuration: 0.15, animations: { () -> Void in
                 var selectionIndicatorWidth : CGFloat = self.selectionIndicatorView.frame.width
