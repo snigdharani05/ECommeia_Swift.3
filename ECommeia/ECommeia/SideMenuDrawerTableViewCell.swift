@@ -12,8 +12,6 @@ class SideMenuDrawerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var menuImageView: UIImageView!
     
-    
-    
     @IBOutlet weak var label: UILabel!
     
 

@@ -81,23 +81,25 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
         
         switch sender {
         case menuButton:
-            if menuButton.tag == 1{
-                menuButton.tag = 2
-                showSideMenuView()
-            }
-            else if menuButton.tag == 2{
-                menuButton.tag = 1
-                if sideMenu != nil{
-                    UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
-                        self.sideMenu.transform = CGAffineTransform(translationX: -600, y: 0)
-                        //self.alpha = 0.0
-                    }, completion: {(anim) -> Void in
-                    })
-                    
-
-                    //sideMenu.removeFromSuperview()
-                }
-            }
+            
+            showSideMenuView()
+//            if menuButton.tag == 1{
+//                menuButton.tag = 2
+//                showSideMenuView()
+//            }
+//            else if menuButton.tag == 2{
+//                menuButton.tag = 1
+//                if sideMenu != nil{
+//                    UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
+//                        self.sideMenu.transform = CGAffineTransform(translationX: -600, y: 0)
+//                        //self.alpha = 0.0
+//                    }, completion: {(anim) -> Void in
+//                    })
+//                    
+//
+//                    //sideMenu.removeFromSuperview()
+//                }
+//            }
             break
         default:
             break
@@ -119,7 +121,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate {
     }
     
     func showSideMenuView(){
-        sideMenu = SideMenuView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
+        sideMenu = SideMenuView(frame: CGRect(x: 0, y: titleBarView.frame.origin.y , width: screenWidth, height: screenHeight - titleBarView.frame.origin.y))
         
         let transition = CATransition()
         transition.type = kCATransitionPush

@@ -23,7 +23,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         
         containerView.roundBorder(0.05)
-        containerView.applyTrasperentBorderColor()
+        containerView.applyBorderColor(1.0, color: gray)
+
     }
 
 }

@@ -67,15 +67,12 @@ extension UIView
         self.clipsToBounds = true
 }
     
-    internal func applyTrasperentBorderColor (){
-        self.layer.borderColor = borderLightColor.cgColor
-        self.layer.borderWidth = 3.0
+    internal func applyBorderColor (_ width: CGFloat, color: UIColor){
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = width
     }
     
-    internal func applyTitleBarColorBorder (){
-        self.layer.borderColor = title_Bar_Color.cgColor
-        self.layer.borderWidth = 1.0
-    }
+
     
     internal func invisibleAndtransformed(val1:CGFloat, val2:CGFloat, delay : TimeInterval)
     {
