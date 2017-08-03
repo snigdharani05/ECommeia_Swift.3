@@ -1,3 +1,5 @@
+
+
 //
 //  FirstViewController.swift
 //  ECommeia
@@ -12,6 +14,8 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @IBOutlet weak var foodCollectionView: UICollectionView!
     
+    var home : HomeViewController! = HomeViewController()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         foodCollectionView.delegate = self
@@ -21,7 +25,7 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
         foodCollectionView.register(nib, forCellWithReuseIdentifier: "mycell")
         foodCollectionView?.allowsMultipleSelection = true
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
@@ -35,16 +39,29 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
             mycell = HomeCollectionViewCell()
         }
         mycell.imageView.setImageFromURl(stringImageUrl: imageURLArray[indexPath.row])
-        
+        mycell.itemNameLabel.text = itemNameArray[indexPath.row]
         mycell.backgroundColor = UIColor.clear
         
         return mycell
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        let cell = collectionView.cellForItem(at: indexPath) as UICollectionViewCell?
+        
+        home.menuButton.tag = 2
+        home.menuButton.setImage(UIImage(named: "back_icon_white.png"), for: UIControlState.normal)
+        let cell = collectionView.cellForItem(at: indexPath) as! HomeCollectionViewCell?
+        
+        let name = cell?.itemNameLabel.text
+        let imageView = cell?.imageView.image
+        let price = cell?.itemPriceLabel.text
+        
         print("You selected cell #\(indexPath.item)!")
+        home.showDetailItemView()
+        home.detailView.itemNameLabel.text = name
+        home.detailView.itemImageView.image = imageView
+        home.detailView.itemImageView.alpha = 1.0
+        home.detailView.itemPriceLabel.text = price
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeslectItemAtIndexPath indexPath: IndexPath) {

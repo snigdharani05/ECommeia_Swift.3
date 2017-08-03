@@ -35,6 +35,13 @@
 		C06E98F31F2F567F004FB8BE /* FifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06E98F11F2F567F004FB8BE /* FifthViewController.xib */; };
 		C06E98F51F2F60C0004FB8BE /* LoginInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E98F41F2F60C0004FB8BE /* LoginInViewController.swift */; };
 		C0A813551F2C4FE700C37711 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A813541F2C4FE700C37711 /* 1.png */; };
+		C0D535411F32EB24009BD093 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5353F1F32EB24009BD093 /* DetailsView.swift */; };
+		C0D535421F32EB24009BD093 /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0D535401F32EB24009BD093 /* DetailsView.xib */; };
+		C0D535441F32EE74009BD093 /* button_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0D535431F32EE74009BD093 /* button_background.jpg */; };
+		C0D535461F32F0BD009BD093 /* back_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D535451F32F0BD009BD093 /* back_icon1.png */; };
+		C0D535481F32F23D009BD093 /* back_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D535471F32F23D009BD093 /* back_icon2.png */; };
+		C0D5354A1F3320B5009BD093 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D535491F3320B5009BD093 /* HRToast+UIView.swift */; };
+		C0D5354E1F3336A8009BD093 /* back_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D5354D1F3336A8009BD093 /* back_icon_white.png */; };
 		C0F6C3EF1F2B4C660013699D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6C3EE1F2B4C660013699D /* AppDelegate.swift */; };
 		C0F6C3F11F2B4C660013699D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6C3F01F2B4C660013699D /* ViewController.swift */; };
 		C0F6C3F41F2B4C660013699D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F6C3F21F2B4C660013699D /* Main.storyboard */; };
@@ -100,6 +107,13 @@
 		C06E98F11F2F567F004FB8BE /* FifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FifthViewController.xib; sourceTree = "<group>"; };
 		C06E98F41F2F60C0004FB8BE /* LoginInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInViewController.swift; sourceTree = "<group>"; };
 		C0A813541F2C4FE700C37711 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		C0D5353F1F32EB24009BD093 /* DetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		C0D535401F32EB24009BD093 /* DetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		C0D535431F32EE74009BD093 /* button_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_background.jpg; sourceTree = "<group>"; };
+		C0D535451F32F0BD009BD093 /* back_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_icon1.png; sourceTree = "<group>"; };
+		C0D535471F32F23D009BD093 /* back_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_icon2.png; sourceTree = "<group>"; };
+		C0D535491F3320B5009BD093 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
+		C0D5354D1F3336A8009BD093 /* back_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_icon_white.png; sourceTree = "<group>"; };
 		C0F6C3EB1F2B4C660013699D /* ECommeia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECommeia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F6C3EE1F2B4C660013699D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F6C3F01F2B4C660013699D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +262,15 @@
 			name = segmentControl;
 			sourceTree = "<group>";
 		};
+		C0D5353E1F32EAFE009BD093 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C0D5353F1F32EB24009BD093 /* DetailsView.swift */,
+				C0D535401F32EB24009BD093 /* DetailsView.xib */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 		C0F6C3E21F2B4C660013699D = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +333,7 @@
 		C0F6C41F1F2B4CBD0013699D /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				C0D5353E1F32EAFE009BD093 /* SubViews */,
 				C01C598A1F3068AD00347EA0 /* SideMenu */,
 				C01C59891F30687500347EA0 /* MenuItemViews */,
 				C06E98F41F2F60C0004FB8BE /* LoginInViewController.swift */,
@@ -321,6 +345,10 @@
 		C0F6C4441F2B4D080013699D /* Icon&Images */ = {
 			isa = PBXGroup;
 			children = (
+				C0D5354D1F3336A8009BD093 /* back_icon_white.png */,
+				C0D535471F32F23D009BD093 /* back_icon2.png */,
+				C0D535451F32F0BD009BD093 /* back_icon1.png */,
+				C0D535431F32EE74009BD093 /* button_background.jpg */,
 				C05F41FF1F31C0D100171B5E /* bbq_consumables.png */,
 				C05F42001F31C0D100171B5E /* bbq_ready_icon.png */,
 				C05F42011F31C0D100171B5E /* cart_slider_icon.png */,
@@ -352,6 +380,7 @@
 			children = (
 				C0F6C44B1F2B4D660013699D /* Constants.swift */,
 				C05F41FD1F31C09100171B5E /* GlobalFunctions.swift */,
+				C0D535491F3320B5009BD093 /* HRToast+UIView.swift */,
 			);
 			name = GlobalSharedClasses;
 			sourceTree = "<group>";
@@ -478,6 +507,8 @@
 				C06E98E31F2F52C1004FB8BE /* FirstViewController.xib in Resources */,
 				C0F6C4521F2B4D700013699D /* cart_icon.png in Resources */,
 				C0F6C3FC1F2B4C660013699D /* LaunchScreen.storyboard in Resources */,
+				C0D5354E1F3336A8009BD093 /* back_icon_white.png in Resources */,
+				C0D535481F32F23D009BD093 /* back_icon2.png in Resources */,
 				C05F42061F31C0D100171B5E /* bbq_consumables.png in Resources */,
 				C05F41F81F31C04400171B5E /* SideMenuDrawerTableViewCell.xib in Resources */,
 				C05F42091F31C0D100171B5E /* entertainment_slider_icon.png in Resources */,
@@ -488,12 +519,15 @@
 				C06E98E71F2F52D0004FB8BE /* SecondViewController.xib in Resources */,
 				C01C599C1F30AD2D00347EA0 /* food_icon.png in Resources */,
 				C0F6C3F41F2B4C660013699D /* Main.storyboard in Resources */,
+				C0D535421F32EB24009BD093 /* DetailsView.xib in Resources */,
 				C0F6C44A1F2B4D5B0013699D /* HomeCollectionViewCell.xib in Resources */,
 				C06E98F31F2F567F004FB8BE /* FifthViewController.xib in Resources */,
+				C0D535441F32EE74009BD093 /* button_background.jpg in Resources */,
 				C05F42081F31C0D100171B5E /* cart_slider_icon.png in Resources */,
 				C01C59931F30A9B000347EA0 /* p3.jpg in Resources */,
 				C0F6C4561F2B51AC0013699D /* menu_icon.png in Resources */,
 				C0A813551F2C4FE700C37711 /* 1.png in Resources */,
+				C0D535461F32F0BD009BD093 /* back_icon1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +603,7 @@
 				C0F6C44D1F2B4D660013699D /* Constants.swift in Sources */,
 				C06E98F21F2F567F004FB8BE /* FifthViewController.swift in Sources */,
 				C05F41FE1F31C09100171B5E /* GlobalFunctions.swift in Sources */,
+				C0D5354A1F3320B5009BD093 /* HRToast+UIView.swift in Sources */,
 				C05F41FB1F31C06C00171B5E /* SideMenuView.swift in Sources */,
 				C05F41F71F31C04400171B5E /* SideMenuDrawerTableViewCell.swift in Sources */,
 				C0F6C3F71F2B4C660013699D /* ECommeia.xcdatamodeld in Sources */,
@@ -577,6 +612,7 @@
 				C0F6C3EF1F2B4C660013699D /* AppDelegate.swift in Sources */,
 				C01C598C1F3068D900347EA0 /* SideMenuDrawerViewController.swift in Sources */,
 				C06E98E21F2F52C1004FB8BE /* FirstViewController.swift in Sources */,
+				C0D535411F32EB24009BD093 /* DetailsView.swift in Sources */,
 				C06E98EA1F2F565C004FB8BE /* ThirdViewController.swift in Sources */,
 				C06E98F51F2F60C0004FB8BE /* LoginInViewController.swift in Sources */,
 				C0F6C45A1F2B548D0013699D /* HomeView.swift in Sources */,

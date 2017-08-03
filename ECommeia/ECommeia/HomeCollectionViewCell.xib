@@ -45,6 +45,9 @@
                                 <rect key="frame" x="141" y="199" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="wishList_icon.png"/>
+                                <connections>
+                                    <action selector="buttonActions:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4Hf-m9-9kk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,6 +59,9 @@
             <connections>
                 <outlet property="containerView" destination="hF7-mJ-Jw6" id="4Yy-eV-a6o"/>
                 <outlet property="imageView" destination="N70-al-IQd" id="tgS-su-eAV"/>
+                <outlet property="itemNameLabel" destination="CgK-kO-DYW" id="0ST-Th-EqO"/>
+                <outlet property="itemPriceLabel" destination="GAT-gm-IZs" id="5C6-uD-uku"/>
+                <outlet property="wishListButton" destination="Fy5-Ir-Eu6" id="8s6-2w-RG5"/>
             </connections>
             <point key="canvasLocation" x="-675" y="-125"/>
         </collectionViewCell>

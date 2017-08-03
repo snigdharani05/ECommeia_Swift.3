@@ -14,6 +14,12 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var containerView: UIView!
     
+    @IBOutlet weak var itemNameLabel: UILabel!
+    
+    @IBOutlet weak var itemPriceLabel: UILabel!
+    
+    @IBOutlet weak var wishListButton: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +32,13 @@ class HomeCollectionViewCell: UICollectionViewCell {
         containerView.applyBorderColor(1.0, color: gray)
 
     }
+    
+    
+    
+    @IBAction func buttonActions(_ sender: UIButton) {
+    }
+    
+    
+    
 
 }

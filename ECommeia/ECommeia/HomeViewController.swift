@@ -26,20 +26,20 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     
     var pageMenu : CAPSPageMenu?
     
+    var detailView : DetailsView!
     
-    
-    
-    
+    var controller1 : FirstViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
+        menuButton.tag = 1
                 
         var controllerArray : [UIViewController] = []
         
-        let controller1 : FirstViewController = FirstViewController(nibName: "FirstViewController", bundle: nil)
-        controller1.title = "Food"
+        controller1 = FirstViewController(nibName: "FirstViewController", bundle: nil)
+        controller1?.title = "Food"
         // firstView = FirstView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: controller1.view.frame.height))
         // controller1.view.addSubview(firstView)
-        controllerArray.append(controller1)
+        controllerArray.append(controller1!)
         
         let controller2 : SecondViewController = SecondViewController(nibName: "SecondViewController", bundle: nil)
         controller2.title = "Cloth"
@@ -67,6 +67,10 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         
         self.view.addSubview(pageMenu!.view)
         pageMenu!.delegate = self
+        
+        controller1?.home = self
+        self.addChildViewController(controller1!)
+
     }
     
     
@@ -94,13 +98,18 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         switch sender {
         case menuButton:
             
-            showSideMenuView()
-//            if menuButton.tag == 1{
-//                menuButton.tag = 2
-//                showSideMenuView()
-//            }
-//            else if menuButton.tag == 2{
-//                menuButton.tag = 1
+ //           showSideMenuView()
+            
+            
+            
+            
+            if menuButton.tag == 1{
+                showSideMenuView()
+            }
+            else if menuButton.tag == 2{
+                menuButton.tag = 1
+                detailView.removeFromSuperview()
+                menuButton.setImage(UIImage(named: "menu_icon.png"), for: UIControlState.normal)
 //                if sideMenu != nil{
 //                    UIView.animate(withDuration: 2.0, delay: 0.0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
 //                        self.sideMenu.transform = CGAffineTransform(translationX: -600, y: 0)
@@ -111,7 +120,11 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
 //
 //                    //sideMenu.removeFromSuperview()
 //                }
-//            }
+            }
+            break
+            
+        case cartButton:
+            //showDetailItemView()
             break
         default:
             break
@@ -154,37 +167,15 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         
     }
     
-//    func showFirstView(){
-//        firstView = FirstView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
-//        self.view.addSubview(firstView)
-//        //firstView.home = self
-//    }
-//    
-//    func showSecondView(){
-//        secondView = SecondView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
-//        self.view.addSubview(secondView)
-//       // firstView.home = self
-//    }
-//
-//    func showThirdView(){
-//        thirdView = ThirdView(frame: CGRect(x: 0, y: screenHeight/5, width: screenWidth, height: screenHeight/1.25))
-//        self.view.addSubview(thirdView)
-//       // firstView.home = self
-//    }
+    func showDetailItemView(){
 
+        detailView = DetailsView(frame: CGRect(x: 0, y: screenHeight/8.1 , width: screenWidth, height: screenHeight - (titleBarView.frame.origin.y + titleBarView.frame.size.height)))
+        self.view.addSubview(detailView)
+        //detailView.home = self
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
