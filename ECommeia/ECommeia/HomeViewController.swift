@@ -20,15 +20,20 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    var pageMenu : CAPSPageMenu?
+
     var homeView : HomeView!
     
     var sideMenu : SideMenuView!
     
-    var pageMenu : CAPSPageMenu?
-    
     var detailView : DetailsView!
     
+    var cartView : CartView!
+    
+    var wishListView : WishListView!
+    
     var controller1 : FirstViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         menuButton.tag = 1
@@ -98,11 +103,6 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         switch sender {
         case menuButton:
             
- //           showSideMenuView()
-            
-            
-            
-            
             if menuButton.tag == 1{
                 showSideMenuView()
             }
@@ -124,7 +124,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
             break
             
         case cartButton:
-            //showDetailItemView()
+            showMyCartView()
             break
         default:
             break
@@ -137,6 +137,18 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
 //    func didMoveToPage(controller: UIViewController, index: Int){}
     
     func showHomeView(){
+        homeView = HomeView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
+        self.view.addSubview(homeView)
+        homeView.home = self
+    }
+    
+    func showMyCartView(){
+        cartView = CartView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
+        self.view.addSubview(cartView)
+        //homeView.home = self
+    }
+
+    func showWishListView(){
         homeView = HomeView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
         self.view.addSubview(homeView)
         homeView.home = self

@@ -42,6 +42,12 @@
 		C0D535481F32F23D009BD093 /* back_icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D535471F32F23D009BD093 /* back_icon2.png */; };
 		C0D5354A1F3320B5009BD093 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D535491F3320B5009BD093 /* HRToast+UIView.swift */; };
 		C0D5354E1F3336A8009BD093 /* back_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C0D5354D1F3336A8009BD093 /* back_icon_white.png */; };
+		C0D535551F333CA5009BD093 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D535531F333CA5009BD093 /* WishListView.swift */; };
+		C0D535561F333CA5009BD093 /* WishListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0D535541F333CA5009BD093 /* WishListView.xib */; };
+		C0D535591F333CC1009BD093 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D535571F333CC1009BD093 /* CartView.swift */; };
+		C0D5355A1F333CC1009BD093 /* CartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0D535581F333CC1009BD093 /* CartView.xib */; };
+		C0D5355D1F334E7E009BD093 /* MyCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D5355B1F334E7E009BD093 /* MyCartTableViewCell.swift */; };
+		C0D5355E1F334E7E009BD093 /* MyCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0D5355C1F334E7E009BD093 /* MyCartTableViewCell.xib */; };
 		C0F6C3EF1F2B4C660013699D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6C3EE1F2B4C660013699D /* AppDelegate.swift */; };
 		C0F6C3F11F2B4C660013699D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6C3F01F2B4C660013699D /* ViewController.swift */; };
 		C0F6C3F41F2B4C660013699D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F6C3F21F2B4C660013699D /* Main.storyboard */; };
@@ -114,6 +120,12 @@
 		C0D535471F32F23D009BD093 /* back_icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_icon2.png; sourceTree = "<group>"; };
 		C0D535491F3320B5009BD093 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HRToast+UIView.swift"; sourceTree = "<group>"; };
 		C0D5354D1F3336A8009BD093 /* back_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_icon_white.png; sourceTree = "<group>"; };
+		C0D535531F333CA5009BD093 /* WishListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		C0D535541F333CA5009BD093 /* WishListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishListView.xib; sourceTree = "<group>"; };
+		C0D535571F333CC1009BD093 /* CartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		C0D535581F333CC1009BD093 /* CartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartView.xib; sourceTree = "<group>"; };
+		C0D5355B1F334E7E009BD093 /* MyCartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartTableViewCell.swift; sourceTree = "<group>"; };
+		C0D5355C1F334E7E009BD093 /* MyCartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCartTableViewCell.xib; sourceTree = "<group>"; };
 		C0F6C3EB1F2B4C660013699D /* ECommeia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECommeia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F6C3EE1F2B4C660013699D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0F6C3F01F2B4C660013699D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +279,10 @@
 			children = (
 				C0D5353F1F32EB24009BD093 /* DetailsView.swift */,
 				C0D535401F32EB24009BD093 /* DetailsView.xib */,
+				C0D535531F333CA5009BD093 /* WishListView.swift */,
+				C0D535541F333CA5009BD093 /* WishListView.xib */,
+				C0D535571F333CC1009BD093 /* CartView.swift */,
+				C0D535581F333CC1009BD093 /* CartView.xib */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -299,7 +315,6 @@
 				C0A813881F2CA52E00C37711 /* 3rdPartyClasses */,
 				C0F6C3F21F2B4C660013699D /* Main.storyboard */,
 				C0F6C41F1F2B4CBD0013699D /* UIElements */,
-				C0F6C4451F2B4D280013699D /* CustomCells */,
 				C0F6C4461F2B4D360013699D /* GlobalSharedClasses */,
 				C0F6C4441F2B4D080013699D /* Icon&Images */,
 				C0F6C3EE1F2B4C660013699D /* AppDelegate.swift */,
@@ -333,6 +348,7 @@
 		C0F6C41F1F2B4CBD0013699D /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				C0F6C4451F2B4D280013699D /* CustomCells */,
 				C0D5353E1F32EAFE009BD093 /* SubViews */,
 				C01C598A1F3068AD00347EA0 /* SideMenu */,
 				C01C59891F30687500347EA0 /* MenuItemViews */,
@@ -371,6 +387,8 @@
 			children = (
 				C0F6C4471F2B4D5B0013699D /* HomeCollectionViewCell.swift */,
 				C0F6C4481F2B4D5B0013699D /* HomeCollectionViewCell.xib */,
+				C0D5355B1F334E7E009BD093 /* MyCartTableViewCell.swift */,
+				C0D5355C1F334E7E009BD093 /* MyCartTableViewCell.xib */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -500,9 +518,11 @@
 			files = (
 				C06E98EF1F2F566F004FB8BE /* FourthViewController.xib in Resources */,
 				C0F6C4651F2B66900013699D /* wishList_icon.png in Resources */,
+				C0D5355A1F333CC1009BD093 /* CartView.xib in Resources */,
 				C05F420A1F31C0D100171B5E /* fast_food_delivery.png in Resources */,
 				C0F6C45B1F2B548D0013699D /* HomeView.xib in Resources */,
 				C05F42071F31C0D100171B5E /* bbq_ready_icon.png in Resources */,
+				C0D5355E1F334E7E009BD093 /* MyCartTableViewCell.xib in Resources */,
 				C05F420B1F31C0D100171B5E /* food_slider_icon.png in Resources */,
 				C06E98E31F2F52C1004FB8BE /* FirstViewController.xib in Resources */,
 				C0F6C4521F2B4D700013699D /* cart_icon.png in Resources */,
@@ -516,6 +536,7 @@
 				C0F6C3F91F2B4C660013699D /* Assets.xcassets in Resources */,
 				C06E98EB1F2F565C004FB8BE /* ThirdViewController.xib in Resources */,
 				C05F420C1F31C0D100171B5E /* rental_slider_icon.png in Resources */,
+				C0D535561F333CA5009BD093 /* WishListView.xib in Resources */,
 				C06E98E71F2F52D0004FB8BE /* SecondViewController.xib in Resources */,
 				C01C599C1F30AD2D00347EA0 /* food_icon.png in Resources */,
 				C0F6C3F41F2B4C660013699D /* Main.storyboard in Resources */,
@@ -607,13 +628,16 @@
 				C05F41FB1F31C06C00171B5E /* SideMenuView.swift in Sources */,
 				C05F41F71F31C04400171B5E /* SideMenuDrawerTableViewCell.swift in Sources */,
 				C0F6C3F71F2B4C660013699D /* ECommeia.xcdatamodeld in Sources */,
+				C0D5355D1F334E7E009BD093 /* MyCartTableViewCell.swift in Sources */,
 				C0F6C3F11F2B4C660013699D /* ViewController.swift in Sources */,
+				C0D535551F333CA5009BD093 /* WishListView.swift in Sources */,
 				C06E98E61F2F52D0004FB8BE /* SecondViewController.swift in Sources */,
 				C0F6C3EF1F2B4C660013699D /* AppDelegate.swift in Sources */,
 				C01C598C1F3068D900347EA0 /* SideMenuDrawerViewController.swift in Sources */,
 				C06E98E21F2F52C1004FB8BE /* FirstViewController.swift in Sources */,
 				C0D535411F32EB24009BD093 /* DetailsView.swift in Sources */,
 				C06E98EA1F2F565C004FB8BE /* ThirdViewController.swift in Sources */,
+				C0D535591F333CC1009BD093 /* CartView.swift in Sources */,
 				C06E98F51F2F60C0004FB8BE /* LoginInViewController.swift in Sources */,
 				C0F6C45A1F2B548D0013699D /* HomeView.swift in Sources */,
 				C0F6C4541F2B4DA30013699D /* HomeViewController.swift in Sources */,

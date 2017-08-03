@@ -51,9 +51,9 @@ class DetailsView: UIView{
     @IBAction func buttonActions(_ sender: UIButton) {
         
         switch sender {
-        case backButton:
-            self.removeFromSuperview()
-            break
+//        case backButton:
+//            self.removeFromSuperview()
+//            break
             
         case quantityDecrementButton:
             
