@@ -28,6 +28,7 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
     
     var groupArray : NSArray!
     
+    
     internal override init(frame: CGRect) {
         super .init(frame: frame)
         let myView = Bundle.main.loadNibNamed("SideMenuView", owner: self, options: nil)?[0] as! UIView

@@ -14,6 +14,8 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myCartTableView: UITableView!
     
+    var getCartArray = [[String: String]]()
+    
     internal override init(frame: CGRect) {
         super .init(frame: frame)
         let myView = Bundle.main.loadNibNamed("CartView", owner: self, options: nil)?[0] as! UIView
@@ -29,20 +31,28 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         let nib = UINib(nibName: "MyCartTableViewCell", bundle: nil)
         myCartTableView.register(nib, forCellReuseIdentifier: "myCell")
         myCartTableView.separatorColor = gray
+        
+        let getArray = GlobalFunctions.getValueFromDefaults("CartArray")
+        print(getArray)
+        
+        getCartArray = getArray as! [[String : String]]
+        
 
     }
     
-    
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 10
+        return getCartArray.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
             let cell: MyCartTableViewCell! = self.myCartTableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCartTableViewCell
-            
+        
+            cell.itemNameLabel?.text = getCartArray[indexPath.row]["ItemName"]
+            cell.itemPriceLabel?.text = getCartArray[indexPath.row]["ItemPrice"]
+            cell.quantityLabel?.text = getCartArray[indexPath.row]["ItemQuantity"]
             cell.backgroundColor = UIColor.clear
-            
+        
             return cell
           }
     

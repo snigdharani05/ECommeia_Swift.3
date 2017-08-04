@@ -95,7 +95,22 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     func moveToFifthPage(){
         pageMenu?.moveToPage(4)
     }
- 
+    
+    
+    func removeSubView(){
+        
+        if sideMenu != nil{
+            sideMenu.removeFromSuperview()
+        }
+        
+        if detailView != nil{
+            detailView.removeFromSuperview()
+        }
+        
+        if cartView != nil{
+            cartView.removeFromSuperview()
+        }
+    }
 
     
     @IBAction func buttonActions(_ sender: UIButton) {
@@ -104,9 +119,11 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         case menuButton:
             
             if menuButton.tag == 1{
+                removeSubView()
                 showSideMenuView()
             }
             else if menuButton.tag == 2{
+                removeSubView()
                 menuButton.tag = 1
                 detailView.removeFromSuperview()
                 menuButton.setImage(UIImage(named: "menu_icon.png"), for: UIControlState.normal)
@@ -124,13 +141,13 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
             break
             
         case cartButton:
+            removeSubView()
             showMyCartView()
             break
         default:
             break
         }
     }
-    
     
 //    func willMoveToPage(controller: UIViewController, index: Int){}
 //    
@@ -165,8 +182,6 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         
         sideMenu.home = self
 
-        
-//        
 //       sideMenu.transform = CGAffineTransform(translationX: -600, y: 0)
 //        
 //        UIView.animate(withDuration: 1.0, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {() -> Void in
@@ -174,9 +189,6 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
 //        }, completion: {(anim) -> Void in
 //            self.sideMenu.backgroundColor = UIColor(white: 0, alpha: 0.5)
 //        })
-//
-        
-        
     }
     
     func showDetailItemView(){
@@ -185,9 +197,9 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         self.view.addSubview(detailView)
         //detailView.home = self
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }

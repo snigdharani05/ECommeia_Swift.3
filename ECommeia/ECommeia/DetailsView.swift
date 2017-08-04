@@ -32,6 +32,10 @@ class DetailsView: UIView{
     
     var i : Int! = 1
     
+    var cartArray : [NSDictionary] = [NSDictionary]()
+    
+    var dict : [String : String] = [String : String]()
+    
     internal override init(frame: CGRect) {
         super .init(frame: frame)
         let myView = Bundle.main.loadNibNamed("DetailsView", owner: self, options: nil)?[0] as! UIView
@@ -43,17 +47,34 @@ class DetailsView: UIView{
         itemImageView.contentMode = UIViewContentMode.scaleAspectFill
         itemImageView.clipsToBounds = true
         
+        if GlobalFunctions.getValueFromDefaults("CartArray") as? [NSDictionary] != nil{
+            let getArray = GlobalFunctions.getValueFromDefaults("CartArray") as! [NSDictionary]
+            print(getArray)
+            cartArray = getArray
+        }
     }
-    
-    
-    
     
     @IBAction func buttonActions(_ sender: UIButton) {
         
         switch sender {
-//        case backButton:
-//            self.removeFromSuperview()
-//            break
+        case addToCartButton:
+            
+            let name = itemNameLabel.text
+            let price = itemPriceLabel.text
+            let quantity = quanityLabel.text
+            
+            dict = ["ItemName" : "\(name!)" , "ItemPrice" : "\(price!)", "ItemQuantity" : "\(quantity!)"]
+            print(dict)
+            
+            cartArray.append(dict as NSDictionary)
+            print(cartArray)
+            
+            GlobalFunctions.saveValueInDefaults(cartArray as! NSMutableArray, keyIs: "CartArray")
+            
+            let getArray = GlobalFunctions.getValueFromDefaults("CartArray") as! [NSDictionary]
+            print(getArray)
+            
+            break
             
         case quantityDecrementButton:
             
@@ -78,15 +99,6 @@ class DetailsView: UIView{
             break
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -19,41 +19,47 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="SWh-rf-VEy">
-                        <rect key="frame" x="11" y="22" width="71" height="71"/>
+                        <rect key="frame" x="11" y="21" width="71" height="71"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB7-si-CHz">
-                        <rect key="frame" x="93" y="22" width="282" height="15"/>
+                        <rect key="frame" x="93" y="21" width="282" height="15"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Price : 20$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr3-7F-qZJ">
-                        <rect key="frame" x="93" y="42" width="282" height="18"/>
+                        <rect key="frame" x="93" y="41" width="282" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="8"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbv-uc-fWR">
-                        <rect key="frame" x="90" y="99" width="77" height="28"/>
+                        <rect key="frame" x="90" y="98" width="77" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="9"/>
                         <state key="normal" title="Remove" backgroundImage="button_background.jpg">
                             <color key="titleColor" red="0.57101946869999998" green="0.41061740450000001" blue="0.63384624410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bqU-xd-5BH"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9F-te-R6o">
-                        <rect key="frame" x="11" y="99" width="71" height="28"/>
+                        <rect key="frame" x="11" y="98" width="71" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="9"/>
                         <state key="normal" title="Add To WishList" backgroundImage="button_background.jpg">
                             <color key="titleColor" red="0.57101946869999998" green="0.41061740450000001" blue="0.63384624410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="buttonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g55-Fg-C5d"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxI-EE-cgZ">
-                        <rect key="frame" x="93" y="65" width="282" height="18"/>
+                        <rect key="frame" x="93" y="64" width="282" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="8"/>
                         <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,7 +67,15 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-42.5" y="-9"/>
+            <connections>
+                <outlet property="addToWishListButton" destination="j9F-te-R6o" id="n9N-YF-HxP"/>
+                <outlet property="itemImageView" destination="SWh-rf-VEy" id="9DY-CW-wfS"/>
+                <outlet property="itemNameLabel" destination="rB7-si-CHz" id="Hi5-YI-4x4"/>
+                <outlet property="itemPriceLabel" destination="Vr3-7F-qZJ" id="zfI-nw-dZV"/>
+                <outlet property="quantityLabel" destination="CxI-EE-cgZ" id="4iB-bu-LBd"/>
+                <outlet property="removeFromCartListButton" destination="Bbv-uc-fWR" id="wPs-ge-loe"/>
+            </connections>
+            <point key="canvasLocation" x="-95" y="4"/>
         </tableViewCell>
     </objects>
     <resources>
