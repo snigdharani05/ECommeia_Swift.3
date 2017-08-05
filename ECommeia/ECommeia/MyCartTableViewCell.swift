@@ -22,13 +22,21 @@ class MyCartTableViewCell: UITableViewCell {
     
     @IBOutlet weak var removeFromCartListButton: UIButton!
     
-
+    var getCartArray = [[String: String]]()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {
+        
+        let getArray = GlobalFunctions.getValueFromDefaults("CartArray")
+        print(getArray)
+        getCartArray = getArray as! [[String : String]]
+        
+        
+        
     }
     
     

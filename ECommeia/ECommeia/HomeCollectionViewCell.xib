@@ -63,7 +63,7 @@
                 <outlet property="itemPriceLabel" destination="GAT-gm-IZs" id="5C6-uD-uku"/>
                 <outlet property="wishListButton" destination="Fy5-Ir-Eu6" id="8s6-2w-RG5"/>
             </connections>
-            <point key="canvasLocation" x="-675" y="-125"/>
+            <point key="canvasLocation" x="-925" y="-144"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -14,6 +14,10 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myCartTableView: UITableView!
     
+    
+    @IBOutlet weak var emptyLabel: UILabel!
+    
+    
     var getCartArray = [[String: String]]()
     
     internal override init(frame: CGRect) {
@@ -22,22 +26,20 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         self.frame = frame
         myView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
         self.addSubview(myView)
-        
         myCartTableView.delegate = self
         myCartTableView.dataSource = self
         myCartTableView.separatorColor = UIColor.clear
-        
         myCartTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         let nib = UINib(nibName: "MyCartTableViewCell", bundle: nil)
         myCartTableView.register(nib, forCellReuseIdentifier: "myCell")
         myCartTableView.separatorColor = gray
-        
         let getArray = GlobalFunctions.getValueFromDefaults("CartArray")
         print(getArray)
-        
         getCartArray = getArray as! [[String : String]]
         
-
+        
+        emptyLabel.dropShadow(scale: true)
+        
     }
     
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -46,23 +48,52 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-            let cell: MyCartTableViewCell! = self.myCartTableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCartTableViewCell
+        let cell: MyCartTableViewCell! = self.myCartTableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCartTableViewCell
+        cell.itemNameLabel?.text = getCartArray[indexPath.row]["ItemName"]
+        cell.itemPriceLabel?.text = getCartArray[indexPath.row]["ItemPrice"]
+        cell.quantityLabel?.text = getCartArray[indexPath.row]["ItemQuantity"]
+        cell.backgroundColor = UIColor.clear
+        cell.removeFromCartListButton.addTarget(self, action:#selector(removeCartItem(_:)), for: .touchUpInside)
+        return cell
+    }
+     
+    func removeCartItem(_ sender : UIButton!){
         
-            cell.itemNameLabel?.text = getCartArray[indexPath.row]["ItemName"]
-            cell.itemPriceLabel?.text = getCartArray[indexPath.row]["ItemPrice"]
-            cell.quantityLabel?.text = getCartArray[indexPath.row]["ItemQuantity"]
-            cell.backgroundColor = UIColor.clear
+       /* CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.table];
+        NSIndexPath *indexPath = [self.table indexPathForRowAtPoint:buttonPosition];
+        [self.arraylist removeObjectAtIndex:indexPath.row];
+        [self.table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];*/
         
-            return cell
-          }
-    
-    
+        let buttnPositn : CGPoint = sender.convert(CGPoint.zero, to: self.myCartTableView)
+        let indexPath : NSIndexPath = self.myCartTableView.indexPathForRow(at: buttnPositn)! as NSIndexPath
+        
+        self.getCartArray.remove(at: indexPath.row)
+            
+        self.myCartTableView!.reloadData()
+        
+        if getCartArray.count == 0{
+            self.myCartTableView.isHidden = true
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
         print(selectedCell)
     }
     
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            print("Deleted")
+//            self.getCartArray.remove(at: indexPath.row)
+//            self.myCartTableView.beginUpdates()
+//            self.myCartTableView.deleteRows(at: [indexPath], with: .automatic)
+//            self.myCartTableView.endUpdates() }}
+//    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

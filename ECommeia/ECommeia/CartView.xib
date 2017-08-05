@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartView" customModule="ECommeia" customModuleProvider="target">
             <connections>
+                <outlet property="emptyLabel" destination="up4-VI-qeE" id="OdR-o9-yHv"/>
                 <outlet property="myCartTableView" destination="ZhF-3d-0AF" id="iYH-fI-INX"/>
                 <outlet property="totalPriceLabel" destination="Pt9-gl-Slr" id="Vyu-1g-Ets"/>
             </connections>
@@ -20,6 +21,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="586"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cart is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up4-VI-qeE">
+                    <rect key="frame" x="47" y="253" width="281" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                    <color key="textColor" red="0.57101946869999998" green="0.41061740450000001" blue="0.63384624410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="30" sectionFooterHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZhF-3d-0AF">
                     <rect key="frame" x="0.0" y="58" width="375" height="478"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
