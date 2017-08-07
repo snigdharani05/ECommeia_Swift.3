@@ -18,7 +18,7 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var emptyLabel: UILabel!
     
     
-    var getCartArray = [[String: String]]()
+    //var getCartArray = [[String : String]]()
     
     internal override init(frame: CGRect) {
         super .init(frame: frame)
@@ -33,25 +33,64 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         let nib = UINib(nibName: "MyCartTableViewCell", bundle: nil)
         myCartTableView.register(nib, forCellReuseIdentifier: "myCell")
         myCartTableView.separatorColor = gray
-        let getArray = GlobalFunctions.getValueFromDefaults("CartArray")
-        print(getArray)
-        getCartArray = getArray as! [[String : String]]
-        
+       /* let getArray = defaults.object(forKey: "CartArray")
+        if getArray != nil{
+            myCartTableView.isHidden = false
+            print(getArray!)
+            print(getCartArray)
+            getCartArray = getArray as! [[String : String]]
+        }else{
+            myCartTableView.isHidden = true
+        }*/
         
         emptyLabel.dropShadow(scale: true)
         
+//        let snapshotValue = snapshot.value as? NSDictionary
+//        let name = snapshotValue["displayName"] as? String
+//        
+//        let a = cartArray[""] as NSArray
+//        //dicts.values(of: "key1")
+        
+        
+        
+            
+            var a : [String] = [String]()
+            var str : String! = String()
+            var myInt : Int = 0
+            var totalAmount : Int = 0
+        
+            for var i in 0 ..< cartArray.count{
+                
+                for dict in cartArray{
+                    
+                str = dict["ItemPrice"]! as String
+                print("\(str!)")
+                i = i + 1
+                a.append(str! as String)
+                myInt = Int(str)!
+                totalAmount = totalAmount + myInt
+            }
+        }
+        
+        print("\(a)")
+        print("\(totalAmount)")
+        totalPriceLabel.text = "$ " + "\(totalAmount)"
     }
     
+    
+    
+    
+    
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return getCartArray.count
+        return cartArray.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell: MyCartTableViewCell! = self.myCartTableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCartTableViewCell
-        cell.itemNameLabel?.text = getCartArray[indexPath.row]["ItemName"]
-        cell.itemPriceLabel?.text = getCartArray[indexPath.row]["ItemPrice"]
-        cell.quantityLabel?.text = getCartArray[indexPath.row]["ItemQuantity"]
+        cell.itemNameLabel?.text = cartArray[indexPath.row]["ItemName"]
+        cell.itemPriceLabel?.text = cartArray[indexPath.row]["ItemPrice"]
+        cell.quantityLabel?.text = "Qt.  " + cartArray[indexPath.row]["ItemQuantity"]!
         cell.backgroundColor = UIColor.clear
         cell.removeFromCartListButton.addTarget(self, action:#selector(removeCartItem(_:)), for: .touchUpInside)
         return cell
@@ -67,11 +106,11 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         let buttnPositn : CGPoint = sender.convert(CGPoint.zero, to: self.myCartTableView)
         let indexPath : NSIndexPath = self.myCartTableView.indexPathForRow(at: buttnPositn)! as NSIndexPath
         
-        self.getCartArray.remove(at: indexPath.row)
+        cartArray.remove(at: indexPath.row)
             
         self.myCartTableView!.reloadData()
         
-        if getCartArray.count == 0{
+        if cartArray.count == 0{
             self.myCartTableView.isHidden = true
         }
         

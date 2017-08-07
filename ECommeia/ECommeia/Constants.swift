@@ -48,6 +48,10 @@ let imageURLArray : [String] = ["https://static.pexels.com/photos/5854/sea-woman
 let itemNameArray : [String] = ["Girl", "Spoons", "Bread", "Grains", "River", "Cakes", "Flower", "Sky", "Bird", "Forest", "Glass", "Train", "Milk", "field"]
 
 
+var cartArray : [[String : String]]! = [[String : String]]()
+var dict : [String : String] = [String : String]()
+
+
 
 
 

@@ -31,9 +31,9 @@ class MyCartTableViewCell: UITableViewCell {
     
     @IBAction func buttonAction(_ sender: UIButton) {
         
-        let getArray = GlobalFunctions.getValueFromDefaults("CartArray")
-        print(getArray)
-        getCartArray = getArray as! [[String : String]]
+//        let getArray = GlobalFunctions.getValueFromDefaults("CartArray")
+//        print(getArray)
+//        getCartArray = getArray as! [[String : String]]
         
         
         

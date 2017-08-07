@@ -32,9 +32,9 @@ class DetailsView: UIView{
     
     var i : Int! = 1
     
-    var cartArray : [NSDictionary] = [NSDictionary]()
     
-    var dict : [String : String] = [String : String]()
+    
+    
     
     internal override init(frame: CGRect) {
         super .init(frame: frame)
@@ -47,11 +47,11 @@ class DetailsView: UIView{
         itemImageView.contentMode = UIViewContentMode.scaleAspectFill
         itemImageView.clipsToBounds = true
         
-        if GlobalFunctions.getValueFromDefaults("CartArray") as? [NSDictionary] != nil{
+      /*  if GlobalFunctions.getValueFromDefaults("CartArray") as? [NSDictionary] != nil{
             let getArray = GlobalFunctions.getValueFromDefaults("CartArray") as! [NSDictionary]
             print(getArray)
             cartArray = getArray
-        }
+        }*/
     }
     
     @IBAction func buttonActions(_ sender: UIButton) {
@@ -60,19 +60,24 @@ class DetailsView: UIView{
         case addToCartButton:
             
             let name = itemNameLabel.text
-            let price = itemPriceLabel.text
             let quantity = quanityLabel.text
+            let quantityCount: Int = Int(quantity!)!
+            let price = itemPriceLabel.text
+            let priceCount: Int = Int(price!)!
+            let totalAmount : Int = priceCount * quantityCount
+            let totalPrice = "\(totalAmount)"
+
             
-            dict = ["ItemName" : "\(name!)" , "ItemPrice" : "\(price!)", "ItemQuantity" : "\(quantity!)"]
+            dict = ["ItemName" : "\(name!)" , "ItemPrice" : "\(totalPrice)", "ItemQuantity" : "\(quantity!)"]
             print(dict)
             
-            cartArray.append(dict as NSDictionary)
+            cartArray.append((dict as NSDictionary) as! [String : String])
             print(cartArray)
             
-            GlobalFunctions.saveValueInDefaults(cartArray as! NSMutableArray, keyIs: "CartArray")
+           /* GlobalFunctions.saveValueInDefaults(cartArray as! NSMutableArray, keyIs: "CartArray")
             
             let getArray = GlobalFunctions.getValueFromDefaults("CartArray") as! [NSDictionary]
-            print(getArray)
+            print(getArray)*/
             
             break
             

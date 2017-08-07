@@ -23,10 +23,11 @@ class GlobalFunctions: NSObject {
     
     class func getValueFromDefaults(_ key:String) -> AnyObject
     {
+        var a : AnyObject! = () as AnyObject
         if (defaults.object(forKey: key) != nil){
-            return defaults.object(forKey: key)! as AnyObject
+           a = defaults.object(forKey: key)! as AnyObject
         }
-        return "" as AnyObject;
+        return a
     }
     
     class func removeValueFromDefaults(_ key: String){
