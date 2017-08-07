@@ -59,17 +59,17 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
             var myInt : Int = 0
             var totalAmount : Int = 0
         
-            for var i in 0 ..< cartArray.count{
+          //  for var i in 0 ..< cartArray.count{
                 
                 for dict in cartArray{
                     
                 str = dict["ItemPrice"]! as String
                 print("\(str!)")
-                i = i + 1
+              //  i = i + 1
                 a.append(str! as String)
                 myInt = Int(str)!
                 totalAmount = totalAmount + myInt
-            }
+          //  }
         }
         
         print("\(a)")
