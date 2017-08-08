@@ -219,9 +219,12 @@ class SideMenuView: UIView, UITableViewDelegate, UITableViewDataSource{
             
             switch indexPath.row {
             case 0: //my cart
-                
+                self.removeSideMenu()
+                self.home.showMyCartView()
                 break
             case 1: //my wishlist
+                self.removeSideMenu()
+                self.home.showWishListView()
                 break
             default:
                 break

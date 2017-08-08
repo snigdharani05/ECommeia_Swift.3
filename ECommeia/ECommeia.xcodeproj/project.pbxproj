@@ -281,10 +281,10 @@
 			children = (
 				C0D5353F1F32EB24009BD093 /* DetailsView.swift */,
 				C0D535401F32EB24009BD093 /* DetailsView.xib */,
-				C0D535531F333CA5009BD093 /* WishListView.swift */,
-				C0D535541F333CA5009BD093 /* WishListView.xib */,
 				C0D535571F333CC1009BD093 /* CartView.swift */,
 				C0D535581F333CC1009BD093 /* CartView.xib */,
+				C0D535531F333CA5009BD093 /* WishListView.swift */,
+				C0D535541F333CA5009BD093 /* WishListView.xib */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";

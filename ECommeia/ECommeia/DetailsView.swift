@@ -68,11 +68,13 @@ class DetailsView: UIView{
             let totalPrice = "\(totalAmount)"
 
             
-            dict = ["ItemName" : "\(name!)" , "ItemPrice" : "\(totalPrice)", "ItemQuantity" : "\(quantity!)"]
-            print(dict)
+            dictionary = ["ItemName" : "\(name!)" , "ItemPrice" : "\(totalPrice)", "ItemQuantity" : "\(quantity!)"]
+            print(dictionary)
             
-            cartArray.append((dict as NSDictionary) as! [String : String])
+            cartArray.append((dictionary as NSDictionary) as! [String : String])
             print(cartArray)
+            
+            self.makeToast(message: "Item added to cart", duration: 2.0, position: "bottom" as AnyObject);
             
            /* GlobalFunctions.saveValueInDefaults(cartArray as! NSMutableArray, keyIs: "CartArray")
             

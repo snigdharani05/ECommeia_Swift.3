@@ -12,13 +12,16 @@ import PageMenu
 
 class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDelegate {
     
+    
+    @IBOutlet weak var homeButton: UIButton!
+    
     @IBOutlet weak var titleBarView: UIView!
     
     @IBOutlet weak var menuButton: UIButton!
     
     @IBOutlet weak var cartButton: UIButton!
     
-    @IBOutlet weak var titleLabel: UILabel!
+    //@IBOutlet weak var titleLabel: UILabel!
     
     var pageMenu : CAPSPageMenu?
 
@@ -110,6 +113,10 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         if cartView != nil{
             cartView.removeFromSuperview()
         }
+        
+        if wishListView != nil{
+            wishListView.removeFromSuperview()
+        }
     }
 
     
@@ -143,6 +150,15 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         case cartButton:
             removeSubView()
             showMyCartView()
+            menuButton.tag = 1
+            menuButton.setImage(UIImage(named: "menu_icon.png"), for: UIControlState.normal)
+            
+            break
+            
+        case homeButton:
+            removeSubView()
+            menuButton.tag = 1
+            menuButton.setImage(UIImage(named: "menu_icon.png"), for: UIControlState.normal)
             break
         default:
             break
@@ -160,15 +176,17 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     }
     
     func showMyCartView(){
+        removeSubView()
         cartView = CartView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
         self.view.addSubview(cartView)
         //homeView.home = self
     }
 
     func showWishListView(){
-        homeView = HomeView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
-        self.view.addSubview(homeView)
-        homeView.home = self
+        removeSubView()
+        wishListView = WishListView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
+        self.view.addSubview(wishListView)
+        //homeView.home = self
     }
     
     func showSideMenuView(){

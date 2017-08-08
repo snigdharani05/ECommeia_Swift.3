@@ -46,10 +46,6 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         totalPriceLabel.text = total
     }
     
-    
-    
-    
-    
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return cartArray.count
     }
@@ -76,6 +72,7 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         let total = GlobalFunctions.calculateTotalPrice()
         totalPriceLabel.text = total
+        self.makeToast(message: "One item removed", duration: 2.0, position: "bottom" as AnyObject);
         
         if cartArray.count == 0{
             self.myCartTableView.isHidden = true

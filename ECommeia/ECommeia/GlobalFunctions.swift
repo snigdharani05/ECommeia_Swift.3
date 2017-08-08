@@ -38,24 +38,23 @@ class GlobalFunctions: NSObject {
     }
     
     class func calculateTotalPrice() -> String{
-        var a : [String] = [String]()
-        var str : String! = String()
-        var myInt : Int = 0
-        var totalAmount : Int = 0
-        
+        var priceArray : [String] = [String]()
+        var priceStringOfEachItem : String! = String()
+        var priceStringOfEachItemInt : Int = 0
+        var totalAmountInCart : Int = 0
         
         for dict in cartArray{
             
-            str = dict["ItemPrice"]! as String
-            print("\(str!)")
-            a.append(str! as String)
-            myInt = Int(str)!
-            totalAmount = totalAmount + myInt
+            priceStringOfEachItem = dict["ItemPrice"]! as String
+            print("\(priceStringOfEachItem!)")
+            priceArray.append(priceStringOfEachItem! as String)
+            priceStringOfEachItemInt = Int(priceStringOfEachItem)!
+            totalAmountInCart = totalAmountInCart + priceStringOfEachItemInt
         }
         
-        print("\(a)")
-        print("\(totalAmount)")
-        return "Total Amount :  $ " + "\(totalAmount)"
+        print("\(priceArray)")
+        print("\(totalAmountInCart)")
+        return "Total Amount :  $ " + "\(totalAmountInCart)"
     }
 
 
