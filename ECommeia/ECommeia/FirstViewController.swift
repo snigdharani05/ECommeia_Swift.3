@@ -40,7 +40,7 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
         mycell.imageView.setImageFromURl(stringImageUrl: imageURLArray[indexPath.row])
         mycell.itemNameLabel.text = itemNameArray[indexPath.row]
-        //mycell.itemPriceLabel.text = "20"
+        mycell.itemPriceLabel.text = itemPriceArray[indexPath.row]
         
         mycell.backgroundColor = UIColor.clear
         

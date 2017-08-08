@@ -14,11 +14,7 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myCartTableView: UITableView!
     
-    
     @IBOutlet weak var emptyLabel: UILabel!
-    
-    
-    //var getCartArray = [[String : String]]()
     
     internal override init(frame: CGRect) {
         super .init(frame: frame)
@@ -33,6 +29,7 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         let nib = UINib(nibName: "MyCartTableViewCell", bundle: nil)
         myCartTableView.register(nib, forCellReuseIdentifier: "myCell")
         myCartTableView.separatorColor = gray
+        
        /* let getArray = defaults.object(forKey: "CartArray")
         if getArray != nil{
             myCartTableView.isHidden = false
@@ -45,36 +42,8 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         emptyLabel.dropShadow(scale: true)
         
-//        let snapshotValue = snapshot.value as? NSDictionary
-//        let name = snapshotValue["displayName"] as? String
-//        
-//        let a = cartArray[""] as NSArray
-//        //dicts.values(of: "key1")
-        
-        
-        
-            
-            var a : [String] = [String]()
-            var str : String! = String()
-            var myInt : Int = 0
-            var totalAmount : Int = 0
-        
-          //  for var i in 0 ..< cartArray.count{
-                
-                for dict in cartArray{
-                    
-                str = dict["ItemPrice"]! as String
-                print("\(str!)")
-              //  i = i + 1
-                a.append(str! as String)
-                myInt = Int(str)!
-                totalAmount = totalAmount + myInt
-          //  }
-        }
-        
-        print("\(a)")
-        print("\(totalAmount)")
-        totalPriceLabel.text = "$ " + "\(totalAmount)"
+        let total = GlobalFunctions.calculateTotalPrice()
+        totalPriceLabel.text = total
     }
     
     
@@ -95,20 +64,18 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         cell.removeFromCartListButton.addTarget(self, action:#selector(removeCartItem(_:)), for: .touchUpInside)
         return cell
     }
+    
      
     func removeCartItem(_ sender : UIButton!){
-        
-       /* CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.table];
-        NSIndexPath *indexPath = [self.table indexPathForRowAtPoint:buttonPosition];
-        [self.arraylist removeObjectAtIndex:indexPath.row];
-        [self.table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];*/
         
         let buttnPositn : CGPoint = sender.convert(CGPoint.zero, to: self.myCartTableView)
         let indexPath : NSIndexPath = self.myCartTableView.indexPathForRow(at: buttnPositn)! as NSIndexPath
         
         cartArray.remove(at: indexPath.row)
-            
         self.myCartTableView!.reloadData()
+        
+        let total = GlobalFunctions.calculateTotalPrice()
+        totalPriceLabel.text = total
         
         if cartArray.count == 0{
             self.myCartTableView.isHidden = true

@@ -36,8 +36,28 @@ class GlobalFunctions: NSObject {
             defaults.removeObject(forKey: key)
         }
     }
-
     
+    class func calculateTotalPrice() -> String{
+        var a : [String] = [String]()
+        var str : String! = String()
+        var myInt : Int = 0
+        var totalAmount : Int = 0
+        
+        
+        for dict in cartArray{
+            
+            str = dict["ItemPrice"]! as String
+            print("\(str!)")
+            a.append(str! as String)
+            myInt = Int(str)!
+            totalAmount = totalAmount + myInt
+        }
+        
+        print("\(a)")
+        print("\(totalAmount)")
+        return "Total Amount :  $ " + "\(totalAmount)"
+    }
+
 
 }
 
