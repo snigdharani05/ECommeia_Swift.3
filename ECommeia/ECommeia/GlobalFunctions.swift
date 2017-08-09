@@ -15,6 +15,18 @@ class GlobalFunctions: NSObject {
     
     
     
+    class func badge(badgeLabel: UILabel, badgeImageView : UIImageView){
+        if cartArray.count == 0{
+            badgeLabel.isHidden = true
+            badgeImageView.isHidden = true
+        }else if cartArray.count > 0{
+            badgeLabel.isHidden = false
+            badgeImageView.isHidden = false
+            badgeLabel.text = "\(cartArray.count)"
+        }
+ 
+    }
+    
     class func saveValueInDefaults(_ value:AnyObject, keyIs:String)
     {
         defaults.set(value, forKey: keyIs)
@@ -59,6 +71,13 @@ class GlobalFunctions: NSObject {
 
 
 }
+extension UILabel{
+    
+    internal func addBadgeValue(){
+        self.text = "\(cartArray.count)"
+    }
+    
+}
 
 extension UIImageView{
     
@@ -78,6 +97,8 @@ extension UIImageView{
     
     
 }
+
+
 
 
 extension UIView

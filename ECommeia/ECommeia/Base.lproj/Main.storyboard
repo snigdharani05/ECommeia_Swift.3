@@ -52,6 +52,17 @@
                                             <action selector="buttonActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wS3-Ah-XR4"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="sNi-wJ-mqy">
+                                        <rect key="frame" x="353" y="12" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yt8-LL-1MU">
+                                        <rect key="frame" x="353" y="12" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.57101946868055553" green="0.4106174045138889" blue="0.63384624408611101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -61,6 +72,8 @@
                     <navigationItem key="navigationItem" id="Oit-JC-mE8"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="badgeImageView" destination="sNi-wJ-mqy" id="5q5-Jp-Dmf"/>
+                        <outlet property="badgeLabel" destination="Yt8-LL-1MU" id="ztc-JX-vnH"/>
                         <outlet property="cartButton" destination="Yds-H1-uzq" id="RdB-Ws-TqR"/>
                         <outlet property="homeButton" destination="6ON-uQ-lle" id="jRB-FG-WHB"/>
                         <outlet property="menuButton" destination="jjU-hT-Bw8" id="HKc-0D-dLG"/>
@@ -267,6 +280,7 @@
     <resources>
         <image name="11.png" width="466" height="500"/>
         <image name="back_icon_white.png" width="512" height="512"/>
+        <image name="badge.png" width="26" height="26"/>
         <image name="button_bg_image.png" width="283" height="83"/>
         <image name="cart_icon.png" width="212" height="199"/>
         <image name="menu_icon.png" width="250" height="250"/>

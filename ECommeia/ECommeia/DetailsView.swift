@@ -30,6 +30,8 @@ class DetailsView: UIView{
     
     @IBOutlet weak var buyNowButton: UIButton!
     
+    var home: HomeViewController! = HomeViewController()
+    
     var i : Int! = 1
     
     
@@ -56,6 +58,8 @@ class DetailsView: UIView{
         switch sender {
         case addToCartButton:
             
+            
+            
             let name = itemNameLabel.text
             let quantity = quanityLabel.text
             let quantityCount: Int = Int(quantity!)!
@@ -77,6 +81,17 @@ class DetailsView: UIView{
             
             let getArray = GlobalFunctions.getValueFromDefaults("CartArray") as! [NSDictionary]
             print(getArray)*/
+            
+//            if cartArray.count == 0{
+//                home.badgeLabel.isHidden = true
+//                home.badgeImageView.isHidden = true
+//            }else if cartArray.count > 0{
+//                home.badgeLabel.isHidden = false
+//                home.badgeImageView.isHidden = false
+//                home.badgeLabel.text = "\(cartArray.count)"
+//            }
+            GlobalFunctions.badge(badgeLabel: home.badgeLabel, badgeImageView : home.badgeImageView)
+
             
             break
             

@@ -97,7 +97,19 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         if cartArray.count == 0{
             self.myCartTableView.isHidden = true
+            checkOutButton.isHidden = true
         }
+        
+//        if cartArray.count == 0{
+//            home.badgeLabel.isHidden = true
+//            home.badgeImageView.isHidden = true
+//        }else if cartArray.count > 0{
+//            home.badgeLabel.isHidden = false
+//            home.badgeImageView.isHidden = false
+//            home.badgeLabel.text = "\(cartArray.count)"
+//        }
+        
+        GlobalFunctions.badge(badgeLabel: home.badgeLabel, badgeImageView : home.badgeImageView)
         
     }
     

@@ -18,6 +18,7 @@
 		C05CB8341F3AF5A700E802E2 /* button_bg_img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C05CB8311F3AF5A700E802E2 /* button_bg_img2.jpg */; };
 		C05CB8381F3B099600E802E2 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = C05CB8371F3B099600E802E2 /* 11.png */; };
 		C05CB83A1F3B0BCB00E802E2 /* button_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C05CB8391F3B0BCB00E802E2 /* button_bg_image.png */; };
+		C05CB8401F3B24A700E802E2 /* badge.png in Resources */ = {isa = PBXBuildFile; fileRef = C05CB83F1F3B24A700E802E2 /* badge.png */; };
 		C05F41F71F31C04400171B5E /* SideMenuDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F41F51F31C04400171B5E /* SideMenuDrawerTableViewCell.swift */; };
 		C05F41F81F31C04400171B5E /* SideMenuDrawerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05F41F61F31C04400171B5E /* SideMenuDrawerTableViewCell.xib */; };
 		C05F41FB1F31C06C00171B5E /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F41F91F31C06C00171B5E /* SideMenuView.swift */; };
@@ -104,6 +105,7 @@
 		C05CB8311F3AF5A700E802E2 /* button_bg_img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button_bg_img2.jpg; sourceTree = "<group>"; };
 		C05CB8371F3B099600E802E2 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		C05CB8391F3B0BCB00E802E2 /* button_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg_image.png; sourceTree = "<group>"; };
+		C05CB83F1F3B24A700E802E2 /* badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge.png; sourceTree = "<group>"; };
 		C05F41F51F31C04400171B5E /* SideMenuDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		C05F41F61F31C04400171B5E /* SideMenuDrawerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuDrawerTableViewCell.xib; sourceTree = "<group>"; };
 		C05F41F91F31C06C00171B5E /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 		C0F6C4441F2B4D080013699D /* Icon&Images */ = {
 			isa = PBXGroup;
 			children = (
+				C05CB83F1F3B24A700E802E2 /* badge.png */,
 				C05CB8391F3B0BCB00E802E2 /* button_bg_image.png */,
 				C05CB8301F3AF5A700E802E2 /* button_bg_img1.jpg */,
 				C05CB8311F3AF5A700E802E2 /* button_bg_img2.jpg */,
@@ -571,6 +574,7 @@
 				C05F420A1F31C0D100171B5E /* fast_food_delivery.png in Resources */,
 				C05CB8341F3AF5A700E802E2 /* button_bg_img2.jpg in Resources */,
 				C0F6C45B1F2B548D0013699D /* HomeView.xib in Resources */,
+				C05CB8401F3B24A700E802E2 /* badge.png in Resources */,
 				C05F42071F31C0D100171B5E /* bbq_ready_icon.png in Resources */,
 				C0DD4DDF1F3598D30099CB09 /* wishList_selected_icon.png in Resources */,
 				C0D5355E1F334E7E009BD093 /* MyCartTableViewCell.xib in Resources */,

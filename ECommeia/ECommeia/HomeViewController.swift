@@ -21,6 +21,10 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     
     @IBOutlet weak var cartButton: UIButton!
     
+    @IBOutlet weak var badgeImageView: UIImageView!
+    
+    @IBOutlet weak var badgeLabel: UILabel!
+    
     //@IBOutlet weak var titleLabel: UILabel!
     
     var pageMenu : CAPSPageMenu?
@@ -39,6 +43,18 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if cartArray.count == 0{
+//            badgeLabel.isHidden = true
+//            badgeImageView.isHidden = true
+//        }else if cartArray.count > 0{
+//            badgeLabel.isHidden = false
+//            badgeImageView.isHidden = false
+//            badgeLabel.text = "\(cartArray.count)"
+//        }
+        
+        GlobalFunctions.badge(badgeLabel: badgeLabel, badgeImageView : badgeImageView)
+        
         menuButton.tag = 1
                 
         var controllerArray : [UIViewController] = []
@@ -78,9 +94,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         
         controller1?.home = self
         self.addChildViewController(controller1!)
-
     }
-    
     
 
     func moveToFirstdPage(){
@@ -183,8 +197,6 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
     }
     
     func loadCheckOutViewController(){
-//        let checkOutVC : CheckOutViewController! = CheckOutViewController()
-//        self.navigationController?.pushViewController(checkOutVC, animated: false)
        performSegue(withIdentifier: "checkOut", sender: self)
     }
 
@@ -219,7 +231,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
 
         detailView = DetailsView(frame: CGRect(x: 0, y: screenHeight/8.1 , width: screenWidth, height: screenHeight - (titleBarView.frame.origin.y + titleBarView.frame.size.height)))
         self.view.addSubview(detailView)
-        //detailView.home = self
+        detailView.home = self
     }
     
     override func didReceiveMemoryWarning() {
