@@ -134,5 +134,19 @@ extension UIPageViewController{
 
 }
 
+extension UITextField{
+    
+    
+    static func changePlaceHolderColor(_ textField: UITextField, placeHolderString:String, color: UIColor , fontSize : CGFloat, fontName: String){
+        
+        var myMutableStringTitle = NSMutableAttributedString()
+        
+        myMutableStringTitle = NSMutableAttributedString(string:placeHolderString, attributes:[NSForegroundColorAttributeName: color, NSFontAttributeName :UIFont(name: fontName, size: fontSize)!])
+        
+        textField.attributedPlaceholder = myMutableStringTitle
+    }
+}
+
+
 
 

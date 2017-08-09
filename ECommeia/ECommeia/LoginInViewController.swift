@@ -24,7 +24,13 @@ class LoginInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        UITextField.changePlaceHolderColor(nameTextField, placeHolderString: "Enter Your Name", color: title_Bar_Color ,fontSize: 14, fontName: helvetica_Bold)
+        
+        UITextField.changePlaceHolderColor(mobileTextFiled, placeHolderString: "Enter Mobile Number", color: title_Bar_Color ,fontSize: 14, fontName: helvetica_Bold)
+        
+        UITextField.changePlaceHolderColor(emailTextField, placeHolderString: "Enter Your EmailId", color: title_Bar_Color ,fontSize: 14, fontName: helvetica_Bold)
+    
+    
     }
 
     

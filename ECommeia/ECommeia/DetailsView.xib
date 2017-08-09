@@ -59,23 +59,12 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF3-5N-60m">
-                    <rect key="frame" x="188" y="514" width="179" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="Buy Now" backgroundImage="button_background.jpg">
-                        <color key="titleColor" red="0.57101946869999998" green="0.41061740450000001" blue="0.63384624410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="4jX-eh-1pA"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ff8-kV-lro">
-                    <rect key="frame" x="8" y="514" width="179" height="44"/>
+                    <rect key="frame" x="8" y="514" width="150" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="Add to cart" backgroundImage="button_background.jpg">
-                        <color key="titleColor" red="0.57101946869999998" green="0.41061740450000001" blue="0.63384624410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Add to cart" backgroundImage="button_bg_image.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="zKK-id-9mp"/>
@@ -90,7 +79,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wa-7I-X0q">
-                    <rect key="frame" x="53" y="424" width="84" height="43"/>
+                    <rect key="frame" x="87" y="424" width="50" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                     <state key="normal" title="-" backgroundImage="button_background.jpg">
@@ -108,7 +97,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-dC-xW4">
-                    <rect key="frame" x="237" y="424" width="84" height="43"/>
+                    <rect key="frame" x="237" y="424" width="50" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="30"/>
                     <state key="normal" title="+" backgroundImage="button_background.jpg">
@@ -116,6 +105,17 @@
                     </state>
                     <connections>
                         <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="gpj-dq-DaT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF3-5N-60m">
+                    <rect key="frame" x="217" y="514" width="150" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                    <state key="normal" title="Buy Now" backgroundImage="button_bg_image.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="4jX-eh-1pA"/>
                     </connections>
                 </button>
             </subviews>
@@ -128,5 +128,6 @@
     <resources>
         <image name="1.png" width="466" height="500"/>
         <image name="button_background.jpg" width="511" height="343"/>
+        <image name="button_bg_image.png" width="283" height="83"/>
     </resources>
 </document>

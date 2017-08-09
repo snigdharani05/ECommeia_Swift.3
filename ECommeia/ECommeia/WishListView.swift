@@ -30,7 +30,7 @@ class WishListView: UIView, UITableViewDelegate, UITableViewDataSource {
         wishListTableView.register(nib, forCellReuseIdentifier: "myCell")
         wishListTableView.separatorColor = gray
         emptyLabel.dropShadow(scale: true)
-        
+        self.wishListTableView.tableFooterView = UIView()
         
     }
     

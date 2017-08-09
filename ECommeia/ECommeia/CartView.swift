@@ -16,6 +16,11 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var emptyLabel: UILabel!
     
+    @IBOutlet weak var checkOutButton: UIButton!
+    
+    var home : HomeViewController! = HomeViewController()
+    
+    
     internal override init(frame: CGRect) {
         super .init(frame: frame)
         let myView = Bundle.main.loadNibNamed("CartView", owner: self, options: nil)?[0] as! UIView
@@ -29,6 +34,7 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
         let nib = UINib(nibName: "MyCartTableViewCell", bundle: nil)
         myCartTableView.register(nib, forCellReuseIdentifier: "myCell")
         myCartTableView.separatorColor = gray
+        self.myCartTableView.tableFooterView = UIView()
         
        /* let getArray = defaults.object(forKey: "CartArray")
         if getArray != nil{
@@ -40,11 +46,26 @@ class CartView: UIView, UITableViewDelegate, UITableViewDataSource {
             myCartTableView.isHidden = true
         }*/
         
+        if cartArray.count != 0{
+            
+            myCartTableView.isHidden = false
+            checkOutButton.isHidden = false
+        }
+        else{
+            myCartTableView.isHidden = true
+            checkOutButton.isHidden = true
+        }
+        
         emptyLabel.dropShadow(scale: true)
         
         let total = GlobalFunctions.calculateTotalPrice()
         totalPriceLabel.text = total
     }
+    
+    @IBAction func buttonAction(_ sender: UIButton) {
+      home.loadCheckOutViewController()
+    }
+    
     
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return cartArray.count

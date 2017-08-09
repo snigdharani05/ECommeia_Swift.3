@@ -55,6 +55,13 @@ var wishListArray : [[String : String]]! = [[String : String]]()
 var wishListDictionary : [String : String] = [String : String]()
 
 
+let dohaLocation = ["Bin Omran","West Bay","Pearl Qatar","Westbay Lagoon","Lusail","Barwah City","Al Markhiya","Al Rayyan","Duhail","Gharaffa","Al Saad","Bin Mahmoud","Al Waab","Abu Hamour","Najma","Salwa Road","Madinat Khalifa","Old Airport","Umm Slal","Corniche","Souq Waqef","Musheireb"]
+
+let dohaLocation1 = ["Bin Omran","West Bay","Pearl Qatar","Westbay Lagoon","Lusail","Barwah City","Al Markhiya","Al Rayyan","Duhail","Gharaffa","Al Saad","Bin Mahmoud","Al Waab","Abu Hamour","Najma","Salwa Road","Madinat Khalifa","Old Airport","Umm Slal","Corniche","Souq Waqef","Musheireb"]
+
+let dohaLocation2 = ["Bin Omran","West Bay","Pearl Qatar","Westbay Lagoon","Lusail","Barwah City","Al Markhiya","Al Rayyan","Duhail","Gharaffa","Al Saad","Bin Mahmoud","Al Waab","Abu Hamour","Najma","Salwa Road","Madinat Khalifa","Old Airport","Umm Slal","Corniche","Souq Waqef","Musheireb"]
+
+let dohaLocation3 = ["Bin Omran","West Bay","Pearl Qatar","Westbay Lagoon","Lusail","Barwah City","Al Markhiya","Al Rayyan","Duhail","Gharaffa","Al Saad","Bin Mahmoud","Al Waab","Abu Hamour","Najma","Salwa Road","Madinat Khalifa","Old Airport","Umm Slal","Corniche","Souq Waqef","Musheireb"]
 
 
 

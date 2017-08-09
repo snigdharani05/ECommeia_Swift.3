@@ -33,9 +33,6 @@ class DetailsView: UIView{
     var i : Int! = 1
     
     
-    
-    
-    
     internal override init(frame: CGRect) {
         super .init(frame: frame)
         let myView = Bundle.main.loadNibNamed("DetailsView", owner: self, options: nil)?[0] as! UIView

@@ -179,7 +179,13 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         removeSubView()
         cartView = CartView(frame: CGRect(x: 0, y: screenHeight/8.1, width: screenWidth, height: screenHeight/1.14))
         self.view.addSubview(cartView)
-        //homeView.home = self
+        cartView.home = self
+    }
+    
+    func loadCheckOutViewController(){
+//        let checkOutVC : CheckOutViewController! = CheckOutViewController()
+//        self.navigationController?.pushViewController(checkOutVC, animated: false)
+       performSegue(withIdentifier: "checkOut", sender: self)
     }
 
     func showWishListView(){
