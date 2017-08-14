@@ -8,6 +8,7 @@
 
 import UIKit
 import PageMenu
+import CoreData
 
 
 class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDelegate {
@@ -52,7 +53,7 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
 //            badgeImageView.isHidden = false
 //            badgeLabel.text = "\(cartArray.count)"
 //        }
-        
+        fetchLoginDetails()
         GlobalFunctions.badge(badgeLabel: badgeLabel, badgeImageView : badgeImageView)
         
         menuButton.tag = 1
@@ -94,6 +95,26 @@ class HomeViewController: UIViewController, CAPSPageMenuDelegate, UIScrollViewDe
         
         controller1?.home = self
         self.addChildViewController(controller1!)
+    }
+    
+    
+    func fetchLoginDetails(){
+        let fetchRequest: NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: "LoginDetails")
+        
+        do {
+            let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let searchResults = try managedContext.fetch(fetchRequest)
+            //print(searchResults)
+            
+            for userName in searchResults {
+               // print(userName)
+                if (userName.value(forKey: "userName") != nil){
+                    print(userName.value(forKey: "userName")! as! String)
+                }
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
     }
     
 
